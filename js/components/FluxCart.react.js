@@ -36,7 +36,7 @@ var FluxCart = React.createClass({
                   <p className="type">{products[product].type} x {products[product].quantity}</p>
 
                   <p className="price">
-                    ${(products[product].price * products[product].quantity).toFixed(2)}</p>
+                    £{(products[product].price * products[product].quantity).toFixed(2)}</p>
                   <button type="button" className="remove-item"
                           onClick={self.removeFromCart.bind(self, product)}>Remove
                   </button>
@@ -44,7 +44,7 @@ var FluxCart = React.createClass({
               )
             })}
           </ul>
-          <span className="total">Total: ${this.props.total}</span>
+          <span className="total">Total: £{this.props.total}</span>
         </div>
         <button type="button" className="view-cart" onClick={this.openCart}
                 disabled={Object.keys(this.props.products).length > 0 ? "" : "disabled"}>View Cart
